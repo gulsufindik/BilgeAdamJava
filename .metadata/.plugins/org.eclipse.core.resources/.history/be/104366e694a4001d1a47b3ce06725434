@@ -1,0 +1,21 @@
+package com.gulsufindik;
+
+public class VeriTipleriKarakter {
+
+	public static void main(String[] args) {
+		// char veritipi :
+		// 1 Byte
+		char charValue ='A';
+		System.out.println(charValue);
+		
+		// soru:
+		char charValue2 = 65;
+		System.out.println(charValue2);
+		
+		// soru:
+		char charValue3 = 84;
+		System.out.println(charValue3);
+
+	}
+
+}

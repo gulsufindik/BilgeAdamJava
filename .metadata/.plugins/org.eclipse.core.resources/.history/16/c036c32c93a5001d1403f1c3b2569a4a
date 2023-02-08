@@ -1,0 +1,10 @@
+package com.gulsufindik;
+
+public class StringDetay {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

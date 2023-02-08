@@ -1,0 +1,10 @@
+package com.gulsufindik;
+
+public class KullanicaidanVeriAlmaScanner {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

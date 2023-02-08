@@ -1,0 +1,23 @@
+package com.gulsufindik;
+
+public class VeriTipleriBoolean {
+
+	public static void main(String[] args) {
+		
+		// bool veritipi :
+		// 1 bit
+		// açık-kapalı, doğru-yanlış, 1-0, ...
+		
+		// boolean olarak neler tutabilir?
+		// Ör. Bir kullanıcının sistemde aktif olup olmadığını tutabilirsiniz (online veya offline durumu)
+		
+		boolean boolDeğişken;
+		boolDegisken = true; // true veya false olarak sadece 2 değerden birini alabilir..
+		System.out.println(boolDegisken);
+		
+		// boolean isHeavy = false; 
+		boolean agirMi = false; // initialize - ilk değer verme
+
+	}
+
+}

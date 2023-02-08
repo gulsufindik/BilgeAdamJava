@@ -1,0 +1,16 @@
+package com.gulsufindik;
+
+import java.util.Scanner;
+
+public class StringDetay {
+
+	public static void main(String[] args) {
+		
+		String metin = "Naber?";
+		Scanner input = new Scanner(System.in);
+		metin = input.nextLine();
+		System.out.println(metin);
+
+	}
+
+}
