@@ -18,9 +18,7 @@ public class Kopek extends Hayvan {
 	@Override
 	public void yemekYe() {
 		System.out.println("Köpek kemik yiyor.");
-		
+
 	}
-	
-	
 
 }

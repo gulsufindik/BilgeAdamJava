@@ -12,6 +12,7 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/Users/su/Downloads/eclipseworkspaceBOOST_8_Interfaces/021_Interface_Ornek"/>
 			<item value="/Users/su/Desktop/BilgeAdamJava"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">

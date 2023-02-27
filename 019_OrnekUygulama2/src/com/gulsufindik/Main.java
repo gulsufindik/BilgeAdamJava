@@ -45,9 +45,10 @@ public class Main {
 //		okul.okuldanSinifCikar("1D");
 //		okul.siniflariYazdir();
 		okul.okuldakiOgrencileriYazdir();
-		
+
 		okul.okuldanSinifCikarIterators("1C");
 		okul.siniflariYazdir();
+
 	}
 
 }
