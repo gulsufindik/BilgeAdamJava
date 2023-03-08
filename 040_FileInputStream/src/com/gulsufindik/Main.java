@@ -9,6 +9,7 @@ public class Main {
 	public static void dosyadanTekbirByteOkuma() {
 
 		FileInputStream fileInputStream = null;
+
 		try {
 			fileInputStream = new FileInputStream("dosya.txt");
 			char c = (char) fileInputStream.read();// 1 byte ı int olarak okur.Char a cast ederek çeviririz
@@ -80,6 +81,7 @@ public class Main {
 	}
 
 	public static void dosyaninTumunuOkuma() {
+		
 		FileInputStream fileInputStream = null;
 		int okunan;
 		String metin = "";
@@ -108,24 +110,48 @@ public class Main {
 			}
 		}
 	}
-	
-	public static void dosyaninBelirtilenKisminiOku(int start , int howMuch) {
+
+	public static void dosyaninBelirtilenKisminiOku(int n, int m, String dosyaAdi) {
 		
+		FileInputStream fileInputStream = null;
+		int okunan;
+		String metin = "";
+		
+		try {
+		fileInputStream = new FileInputStream(dosyaAdi);
+		fileInputStream.skip(n);
+		int sayac = 0;
+		
+		while( (okunan = fileInputStream.read()) != -1 ) {
+			metin += (char) okunan;
+			sayac ++ ;
+			
+			if (sayac == m)
+				break;
+		}
+		System.out.println(metin);
+		
+		} catch (FileNotFoundException e) {
+			System.out.println("Belirtilen dosya bulanamadı");
+			e.printStackTrace();
+		} catch (IOException e) {
+			System.out.println("Dosyayı yazma/okuma hatası!");
+			e.printStackTrace();
+		}
+
 	}
 
 	public static void main(String[] args) {
 
 		// dosyadanTekbirByteOkuma();
-		//dosyaninOrtasindanByteOkuma();
-		dosyaninTumunuOkuma();
-		
+		// dosyaninOrtasindanByteOkuma();	
+		// dosyaninTumunuOkuma();
+
 		/*
-		 * Ödev :
-		 * Bir metod yazınız
-		 * Bir dosyanın n. karakterinden başlayıp m tane karakter okusun ve ekrana yazsın
-		 * dosyaninBelirtilenKisminiOku
+		 * Ödev : Bir metod yazınız Bir dosyanın n. karakterinden başlayıp m tane
+		 * karakter okusun ve ekrana yazsın dosyaninBelirtilenKisminiOku
 		 */
-		
+
 		System.out.println("Hoşçakalın");
 
 	}
