@@ -7,7 +7,7 @@ public class Otomobil implements Serializable {
 	private String marka;
 	private String model;
 	private int yil;
-	
+
 	public Otomobil(String marka, String model, int yil) {
 		super();
 		this.marka = marka;
@@ -38,8 +38,6 @@ public class Otomobil implements Serializable {
 	public void setYil(int yil) {
 		this.yil = yil;
 	}
-
-	
 
 	@Override
 	public String toString() {

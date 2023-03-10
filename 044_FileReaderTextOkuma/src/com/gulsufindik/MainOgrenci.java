@@ -9,31 +9,28 @@ import java.util.Scanner;
 public class MainOgrenci {
 
 	public static void main(String[] args) {
-		
-		List<Ogrenci> ogrenciList = new ArrayList<Ogrenci>();
-		
-		// Scanner sınıfı Closeable interfacesini implement ettiği için try-with-resourcez kalıbı ile kullanılabilir
-		// (+ Scanner bir InputStream ile çalıştığı için tabi ki)
-		try(Scanner scanner = new Scanner(new FileReader("liste.txt"))) {
-			
-			// tüm satırları nasıl okuruz?
-			while(scanner.hasNextLine()) 
-			{
-				String okunanSatir = scanner.nextLine();
-				String[] array = okunanSatir.split(","); // Ali kaya, 111 -> array[0] = "Ali kaya" ve array[1] = "111"
-				Ogrenci ogrenci = new Ogrenci(array[0], Integer.parseInt(array[1].trim()));  // array[1].trim() -> "111"
+		List<Ogrenci> ogrenciList = new ArrayList<>();
+		// Scanner sınıfı Closable interfacesini implement ettiği için
+		// try-with-resources kalıbı ile kullanılabilir.
+		// (+ Scanner bir InputStream ile çalıştığı için tabiki)
+		try (Scanner sc = new Scanner(new FileReader("liste.txt"))) {
+
+			// Tüm satırları nasıl okuruz
+			while (sc.hasNextLine()) {
+
+				String okunanSatir = sc.nextLine();
+				String[] array = okunanSatir.split(","); // Ali Kaya, 111 => array[0] = "Ali Kaya" array[1] = " 111"
+				Ogrenci ogrenci = new Ogrenci(array[0], Integer.parseInt(array[1].trim()));
 				ogrenciList.add(ogrenci);
 			}
-			
+
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
+			System.out.println("Dosya bulunamadı..!");
 			e.printStackTrace();
 		}
-		
+
 		for (Ogrenci ogr : ogrenciList) {
 			System.out.println(ogr);
 		}
-
 	}
-
 }

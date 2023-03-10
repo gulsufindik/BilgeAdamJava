@@ -2,8 +2,9 @@ package com.gulsufindik;
 
 import java.io.Serializable;
 
-public class Otomobil implements Serializable {
-
+//POJO
+public class Otomobil implements Serializable{
+	
 	private static final long serialVersionUID = 1;
 
 	private String marka;

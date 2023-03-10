@@ -5,43 +5,42 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-	// TRY WITH RESOURCES KULLANIMI
-	// Closeable interface'ini implement eden hrhangi bir sınıfı try-with-resources kalıbı ile kullnabilirsiniz
-	// bu şekilde close için extra bir finally kod bloğu yazmak zorunda kalmazsınız
 	
-	/* 
-	 try(declare resources here) {
-		
-	} catch (Exception e) {
-		// exception handling
-	} 
-	*/
+	//TRY WITH RESOURCES KULLANIMI:
+	
+	//Closeable interfacesini implement eden herhangi bir sınıfı try-with resources kalıbı ile kullanılır
+	//Bu şekilde close için extra finally yazmak zorunda değilsin
+	
+//	try(declare resources here){
+//		
+//	}catch(Exception e) {
+//		//Exception Handling
+//	}
 
 	public static void main(String[] args) {
 		
-		try (FileWriter writer = new FileWriter("markalar.txt")) {
-			Scanner scanner = new Scanner(System.in);
-			String marka = "";
+		try(FileWriter writer = new FileWriter("markalar.txt",true)){
+			Scanner sc = new Scanner(System.in);
+			String marka="";
 			
-			// kullanıcıdan marka girmesini isteyiniz
-			// kullanıcı -1 girene kadar kullanıcının girdiği markayı markalar .txt dosyasına yazdırın
+			//Kullanıcıdan marka girmesini isteyin
+			//Kullanıcı -1 girene kadar girdiği markaları txtye yazdık
+			
 			while (true) {
-				System.out.println("Lütfen bir marka giriniz: ");
-				marka = scanner.nextLine();
-				
-				if (marka.equals("-1")) {
-					System.out.println("Programdan çıkılıyor lütfen dosyayı kontrol ediniz..");
+				System.out.println("Lütfen Bir Marka giriniz");
+				marka = sc.nextLine();
+				if(marka.equals("-1")) {
+					System.out.println("Programdan çıkılıyor dosyayı kontrol edin");
 					break;
 				}
-				writer.write(marka+ "\n");
+				writer.write(marka+"\n");
 			}
 			
 			
 		} catch (IOException e) {
-			System.out.println("I/O exception aldık");
+			System.out.println("I/O Exception Aldık");
 			e.printStackTrace();
 		}
-		
 
 	}
 

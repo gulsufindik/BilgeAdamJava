@@ -8,31 +8,25 @@ import java.io.ObjectOutputStream;
 public class NesneyiSerilestirDosyayaYazMain {
 
 	public static void main(String[] args) {
-		
+
 		try (ObjectOutputStream outStream = new ObjectOutputStream(new FileOutputStream("otomobil.bin"))) {
-			
-			Otomobil otomobil1 = new Otomobil("opel", "Astra", 2017);
-			Otomobil otomobil2 = new Otomobil("audi", "A3", 2018);
-			Otomobil otomobil3 = new Otomobil("bmw", "1.18", 2015);
-			
-			outStream.writeObject(otomobil1);  // Java gönderdiğimiz otomobil objesini object sınıfından bir nesneye dönüştürecek
-			outStream.writeObject(otomobil2);  // sonrada bunu byte dizisi olarak otomobil.bin dosyasına yazıcak
-			outStream.writeObject(otomobil3);
-			
-			
+
+			Otomobil oto1 = new Otomobil("Opel", "Astra", 2017);
+			Otomobil oto2 = new Otomobil("Audi", "A3", 2018);
+			Otomobil oto3 = new Otomobil("BMW", "1.18", 2015);
+
+			outStream.writeObject(oto1); // Java gönderdiğimiz otomobil objesini
+			outStream.writeObject(oto2); // Object sınıfından bir nesneyedönüştürecek
+			outStream.writeObject(oto3); // Sonra bunu byte dizisi olarak otomobil.bin e yazıdırır.
 		} catch (FileNotFoundException e) {
-			System.out.println("Dosya bulunamadı hatası");
+			System.out.println("Dosya bulunamadı...");
 			e.printStackTrace();
 		} catch (IOException e) {
-			System.out.println("Dosyaya yazma hatası");
+			System.out.println("Dosya yazma hatası...");
 			e.printStackTrace();
-		} catch (Exception e) {
-			System.out.println("bilinemeyen bir hata oluştu");
-			e.printStackTrace();
+		}catch (Exception e) {
+			System.out.println("Bilinmeyen bir hata oluştu...");
 		}
-		
-		System.out.println("Serialization process completed");
-
+		System.out.println("Serilization process completed...");
 	}
-
 }

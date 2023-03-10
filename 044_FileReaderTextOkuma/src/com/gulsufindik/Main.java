@@ -7,24 +7,23 @@ import java.io.IOException;
 public class Main {
 
 	public static void main(String[] args) {
-		
-		try (FileReader reader = new FileReader("liste.txt")) {
+	
+		try(FileReader reader =new FileReader("liste.txt") ){
 			
-			// tüm satırları okuyalım
 			int okunan;
-			while ((okunan = reader.read()) !=-1 ) {
+			while((okunan = reader.read()) != -1 ) {
 				char okunanChar = (char) okunan;
 				System.out.print(okunanChar);
 			}
 			
 		} catch (FileNotFoundException e) {
-			System.out.print("Dosya bulunamadı");
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			System.out.print("Dosya okunurken hata oluştu");
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
+		
 	}
 
 }

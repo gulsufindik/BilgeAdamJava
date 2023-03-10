@@ -3,26 +3,36 @@ package com.gulsufindik;
 import java.io.FileWriter;
 import java.io.IOException;
 
-// FileWriter ile sadece text dosyları oluşturulabilir
-// write() metodunun içine direk String verilebilir
 public class Main {
 
-	public static void main(String[] args) {
-		
-		FileWriter filewriter = null;
-		
-		try {
-		fileWriter = new FileWriter("dosya.txt", true);
-		
-		// FileWrite ile dosyaya veriyi byte'a çevirmeden direk String olarak yazılabilir
-		fileWrite.write("Bartu Sungur");
-		fileWrite.write("Ahmet Ozan");
+	// FileWriter ile sadece text dosyaları yazılabilir.
+	// Write() metodunun içine direkt String verilebilir.
 
-	} catch (IOException e) {
-		System.out.println("Dosya açılırken veya yazarken hata oluştu");
-		e.printStackTrace();
-	} finally {
-		if (fileWriter )
+	public static void main(String[] args) {
+		FileWriter fileWriter = null;
+
+		try {
+			fileWriter = new FileWriter("dosya.txt", true);
+			
+			//FileWriter ile dosyaya veriyi byte'a çevirmeden direk String olarak yazabiliriz.
+			fileWriter.write("Yasin Solak\n");
+			fileWriter.write("Kazım Şeker");
+		} catch (IOException e) {
+			System.out.println("Dosya açılırken veya yazarken hata oluştu");
+			e.printStackTrace();
+		}catch (Exception e) {
+			System.out.println("Bilinmeyen hata");
+		}finally {
+			if(fileWriter != null) {
+				try {
+					fileWriter.close();
+				} catch (IOException e) {
+					System.out.println("Dosya kapatırken hata oluştu");
+					e.printStackTrace();
+				}
+			}
+		}
+		System.out.println("Bye");
 	}
 
 }
