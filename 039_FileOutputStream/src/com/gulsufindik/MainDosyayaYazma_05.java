@@ -12,7 +12,7 @@ public class MainDosyayaYazma_05 {
 		FileOutputStream fileOutputStream = null;
 
 		// Dosyayı açmak için
-		// 2. yol : fileOutputStream içine paramtre olarak string
+		// 2. yol : fileOutputStream içine parametre olarak string
 		try {
 			fileOutputStream = new FileOutputStream("dosya.txt", false); // Dosya mevcutsa içeriğini silmez ekleme yapar
 			// fileOutputStream = new FileOutputStream("C:\\test3\\dosya.txt");

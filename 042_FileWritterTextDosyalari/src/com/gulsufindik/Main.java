@@ -15,8 +15,8 @@ public class Main {
 			fileWriter = new FileWriter("dosya.txt", true);
 			
 			//FileWriter ile dosyaya veriyi byte'a çevirmeden direk String olarak yazabiliriz.
-			fileWriter.write("Yasin Solak\n");
-			fileWriter.write("Kazım Şeker");
+			fileWriter.write("Gülsu Fındık\n");
+			fileWriter.write("Mişa Polat");
 		} catch (IOException e) {
 			System.out.println("Dosya açılırken veya yazarken hata oluştu");
 			e.printStackTrace();

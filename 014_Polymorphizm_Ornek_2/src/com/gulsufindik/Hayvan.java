@@ -3,20 +3,18 @@ package com.gulsufindik;
 public class Hayvan {
 
 	private String ad;
-	private int kilo;
-	private int uzunluk;
-	
-	
-	
-	public Hayvan(String ad, int kilo, int uzunluk) {
+	private int kilosu;
+	private int uzunlugu;
+
+	public Hayvan(String ad, int kilosu, int uzunlugu) {
 		super();
 		this.ad = ad;
-		this.kilo = kilo;
-		this.uzunluk = uzunluk;
+		this.kilosu = kilosu;
+		this.uzunlugu = uzunlugu;
 	}
 
 	public void sesCikar() {
-		
+
 	}
 
 	public String getAd() {
@@ -27,25 +25,25 @@ public class Hayvan {
 		this.ad = ad;
 	}
 
-	public int getKilo() {
-		return kilo;
+	public int getKilosu() {
+		return kilosu;
 	}
 
-	public void setKilo(int kilo) {
-		this.kilo = kilo;
+	public void setKilosu(int kilosu) {
+		this.kilosu = kilosu;
 	}
 
-	public int getUzunluk() {
-		return uzunluk;
+	public int getUzunlugu() {
+		return uzunlugu;
 	}
 
-	public void setUzunluk(int uzunluk) {
-		this.uzunluk = uzunluk;
+	public void setUzunlugu(int uzunlugu) {
+		this.uzunlugu = uzunlugu;
 	}
 
 	@Override
 	public String toString() {
-		return "Hayvan [ad=" + ad + ", kilo=" + kilo + ", uzunluk=" + uzunluk + "]";
+		return "Hayvan [ad=" + ad + ", kilosu=" + kilosu + ", uzunlugu=" + uzunlugu + "]";
 	}
 
 }

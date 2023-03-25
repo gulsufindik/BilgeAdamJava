@@ -1,6 +1,6 @@
 package com.gulsufindik;
 
-//Bir class'ı Thread sınıfından extends ederseniz .Türettiğiniz bu yeni class da Thread olur
+//Bir class'ı Thread sınıfından extend ederseniz (türetirseniz), türettiğimiz yeni class da bir Thread olur.
 
 public class Yazici extends Thread {
 
@@ -23,23 +23,27 @@ public class Yazici extends Thread {
 		return "Yazici [isim=" + isim + "]";
 	}
 
-	// Dİkkat :
-	// Threadimiz start() ettirildiğinde (çalıştırıldığında ) çalışacak kodlar run
+	// Dikkat !
+	//
+	// Thread, start() ettirildiğinde (çalıştırıldığında) çalışacak kodlar run()
 	// metodunun içine yazılmalıdır.
+
 	@Override
 	public void run() {
-		System.out.println(this.isim + " İsimli Thread Çalışıyor...");
-
-		for (int i = 0; i < 10; i++) {
-			System.out.println(this.isim + " yazıyor : " + i);
+		
+		System.out.println(this.isim + " isimli thread çalışıyor...");
+		
+		for(int i = 1; i <= 10; i++) {
+			System.out.println(this.isim + " yazıyor: " + i);
 			try {
-				Thread.sleep(2000);
+				Thread.sleep(1000);
 			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
-
-		System.out.println(this.isim + " İsimli Thread İşini Bitirdi...");
+				
+		System.out.println(this.isim + " isimli thread işini bitirdi..");
 	}
 
 }
